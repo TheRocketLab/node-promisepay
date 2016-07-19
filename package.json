@@ -1,0 +1,22 @@
+{
+  "name": "promisepay",
+  "version": "0.0.1",
+  "description": "PromisePay library for node",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRocketLab/node-promisepay.git"
+  },
+  "keywords": [
+    "promisepay"
+  ],
+  "author": "RocketLab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheRocketLab/node-promisepay/issues"
+  },
+  "homepage": "https://github.com/TheRocketLab/node-promisepay#readme"
+}
