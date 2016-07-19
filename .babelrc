@@ -1,0 +1,10 @@
+{
+  "presets": ["es2015-node5", "stage-0"],
+  "plugins": [
+    ["transform-async-to-module-method", {
+      "module": "bluebird",
+      "method": "coroutine"
+    }],
+    "transform-decorators-legacy"
+  ]
+}
