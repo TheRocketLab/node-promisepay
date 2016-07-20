@@ -1,9 +1,7 @@
+# Folders
 test/
-
-# Project Source
 src/
-
-# Mac OS X
+gulp/
 .DS_Store
 
 # Node.js
@@ -13,3 +11,4 @@ npm-debug.log
 
 # Git
 .git*
+gulpfile.babel.js
