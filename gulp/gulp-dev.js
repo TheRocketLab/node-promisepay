@@ -5,9 +5,9 @@ import eslint from 'gulp-eslint';
 import runSequence from 'run-sequence';
 import friendlyFormatter from 'eslint-friendly-formatter';
 import babel from 'gulp-babel';
-import concat from 'gulp-concat';
-import uglify from 'gulp-uglify';
-import rename from 'gulp-rename';
+// import concat from 'gulp-concat';
+// import uglify from 'gulp-uglify';
+// import rename from 'gulp-rename';
 
 const base = path.resolve(__dirname, '../');
 const baseResolve = (p) => path.resolve(path.join(base, p));
