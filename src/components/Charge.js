@@ -1,15 +1,18 @@
-import Resource from './Resource';
+import BaseComponent from './BaseComponent';
 
 const URI_BASE = '/addresses';
 
-export default class Charge extends Resource {
-  constructor(requester) {
-    const resourceFields = [
-      'account_id', 'name', 'amount', 'email', 'zip', 'country', 'user_id', 'fee_ids', 'currency',
-      'retain_account', 'device_id', 'ip_address',
-    ];
-    const requiredFields = ['account_id', 'amount', 'email', 'zip', 'country'];
-    super(requester, URI_BASE, resourceFields, requiredFields);
+export default class Charge extends BaseComponent {
+  create(data) {
+    return this.client.post(URI_BASE, data);
+  }
+
+  list({ limit, offset }) {
+    return this.client.get(URI_BASE, { limit, offset });
+  }
+
+  get(id) {
+    return this.client.get(`${URI_BASE}/${id}`);
   }
 
   getBuyer(id) {

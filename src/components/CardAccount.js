@@ -1,14 +1,14 @@
-import Resource from './Resource';
+import BaseComponent from './BaseComponent';
 
 const URI_BASE = '/card_accounts';
 
-export default class CardAccount extends Resource {
-  constructor(requester) {
-    const resourceFields = [
-      'user_id', 'full_name', 'number', 'expiry_month', 'expiry_year', 'cvv',
-    ];
-    const requiredFields = [];
-    super(requester, URI_BASE, resourceFields, requiredFields);
+export default class CardAccount extends BaseComponent {
+  create(data) {
+    return this.client.post(URI_BASE, data);
+  }
+
+  get(id) {
+    return this.client.get(`${URI_BASE}/${id}`);
   }
 
   delete(id) {
