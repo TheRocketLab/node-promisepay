@@ -1,6 +1,39 @@
-# Endpoints
+# PromisePay Node.js Client
 
+[![npm version](https://badge.fury.io/js/promisepay.svg)](http://badge.fury.io/js/promisepay)
+
+## Installation
+
+To install use `npm` and add the package to your application's dependencies:
+
+    $ npm install promisepay --save
+
+## Usage
+
+```javascript
+import promisepay from 'promisepay';
+
+ppClient = promisePay({
+  userName: process.env.PP_USER,
+  token: process.env.PP_TOKEN,
+  preLive: process.env.PP_LIVE !== 'true',
+  currency: 'USD',
+  debug: true,
+  logger: winston.info,
+});
+
+const users = await ppClient.users.list({ limit: 5 });
+
+# or
+
+ppClient.users.list({ limit: 5 }).then(data => {
+  console.log(data);
+});
 ```
+
+## Endpoints
+
+```javascript
 # User Methods
 * promisePay.users.create(data)
 * promisePay.users.list({ limit, offset, search })
@@ -19,24 +52,26 @@
 * promisePay.companies.get(id)
 * promisePay.companies.update(id, data)
 
-# Bank Account Methods (To Update)
+# Bank Account Methods
 * promisePay.bankAccounts.create(data)
 * promisePay.bankAccounts.get(id)
 * promisePay.bankAccounts.delete(id)
 * promisePay.bankAccounts.getUsers(id)
 * promisePay.bankAccounts.verifyRoutingNumber(number)
 
-# Card Account Methods (To Update)
+# Card Account Methods
+* promisePay.cardAccounts.create(data)
 * promisePay.cardAccounts.get(id)
 * promisePay.cardAccounts.delete(id)
 * promisePay.cardAccounts.getUsers(id)
 
-# Paypal Account Methods (To Update)
+# Paypal Account Methods
+* promisePay.paypalAccounts.create(data)
 * promisePay.paypalAccounts.get(id)
 * promisePay.paypalAccounts.delete(id)
 * promisePay.paypalAccounts.getUsers(id)
 
-# Wallet Account Methods (To Update)
+# Wallet Account Methods
 * promisePay.walletAccounts.get(id)
 * promisePay.walletAccounts.withdraw(id, { account_id, amount })
 * promisePay.walletAccounts.deposit(id, { account_id, amount })
@@ -87,7 +122,9 @@
 * promisePay.itemActions.sendTaxInvoice(itemId)
 * promisePay.itemActions.requestTaxInvoice(itemId)
 
-# Charge Methods (to update)
+# Charge Methods
+* promisePay.charges.create(data)
+* promisePay.charges.list({ limit, offset }})
 * promisePay.charges.get(id)
 * promisePay.charges.getBuyer(id)
 * promisePay.charges.getStatus(id)
