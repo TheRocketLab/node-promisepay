@@ -18,10 +18,6 @@ import Token from './components/Token';
 import Requester from './Requester';
 
 export default function instance(config) {
-  if (!config.userName) {
-    throw new Error('PromisePay requires a userName');
-  }
-
   const requester = new Requester(config);
 
   return {
