@@ -1,6 +1,9 @@
 # PromisePay Node.js Client
 
+<p align="center">
 [![npm version](https://badge.fury.io/js/promisepay.svg)](http://badge.fury.io/js/promisepay)
+[![Dependency Status](https://david-dm.org/TheRocketLab/node-promisepay.svg)](https://david-dm.org/TheRocketLab/node-promisepay)
+</p>
 
 ## Installation
 
