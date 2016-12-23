@@ -46,7 +46,7 @@ ppClient.users.list({ limit: 5 }).then(data => {
 * promisePay.users.getCardAccount(id)
 * promisePay.users.getPaypalAccount(id)
 * promisePay.users.getWalletAccount(id)
-* promisePay.users.setDisbursementAccount(id)
+* promisePay.users.setDisbursementAccount(id, accountId)
 * promisePay.users.listItems(id)
 
 # Company Methods
