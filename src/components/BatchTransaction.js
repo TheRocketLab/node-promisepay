@@ -13,4 +13,8 @@ export default class BatchTransaction extends BaseComponent {
   get(id) {
     return this.client.get(`${URI_BASE}/${id}`);
   }
+
+  getItems(id) {
+    return this.client.get(`${URI_BASE}/${id}/items`);
+  }
 }

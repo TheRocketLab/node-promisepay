@@ -144,10 +144,12 @@ ppClient.users.list({ limit: 5 }).then(data => {
 * promisePay.transactions.getBankAccount(id)
 * promisePay.transactions.getCardAccount(id)
 * promisePay.transactions.getPaypalAccount(id)
+* promisePay.transactions.getItems(id)
 
 # Batch Transaction Methods
 * promisePay.batchTransactions.list({ limit, offset, account_id, batch_id, item_id, transaction_type, transaction_type_method, direction })
 * promisePay.batchTransactions.get(id)
+* promisePay.batchTransactions.getItems(id)
 
 # Callback Methods
 * promisePay.callbacks.create({ description, url, object_type, enabled })

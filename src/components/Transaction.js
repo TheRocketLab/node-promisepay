@@ -37,4 +37,8 @@ export default class Transaction extends BaseComponent {
   getPaypalAccount(id) {
     return this.client.get(`${URI_BASE}/${id}/paypal_accounts`);
   }
+
+  getItems(id) {
+    return this.client.get(`${URI_BASE}/${id}/items`);
+  }
 }
