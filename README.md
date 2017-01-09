@@ -9,7 +9,11 @@ This is a nodeJS library for PromisePay. For more details about the API please r
 
 ## Installation
 
-To install use `npm` and add the package to your application's dependencies:
+To install use `yarn`:
+
+    $ yarn add promisepay
+
+Or if you are old school, you can use `npm` and add the package to your application's dependencies:
 
     $ npm install promisepay --save
 
