@@ -2,7 +2,7 @@
   "name": "promisepay",
   "author": "RocketLab",
   "license": "MIT",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "PromisePay library for node",
   "main": "./dist/index.js",
   "keywords": [
