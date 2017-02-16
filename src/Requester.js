@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import request from 'request-promise';
 
-const PRE_LIVE_API = 'https://test.api.promisepay.com';
-const LIVE_API = 'https://api.promisepay.com';
+const PRE_LIVE_API = process.env.PROMISE_PAY_TEST_API || 'https://test.api.promisepay.com';
+const LIVE_API = process.env.PROMISE_PAY_PROD_API || 'https://secure.api.promisepay.com';
 
 export default class Requester {
   constructor(config = {}) {
