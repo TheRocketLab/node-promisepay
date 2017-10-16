@@ -1,6 +1,6 @@
 import BaseComponent from './BaseComponent';
 
-const URI_BASE = '/addresses';
+const URI_BASE = '/charges';
 
 export default class Charge extends BaseComponent {
   create(data) {
