@@ -178,3 +178,4 @@ ppClient.users.list({ limit: 5 }).then(data => {
 
 * Maxime Aoustin ([@maxwell2022](https://github.com/maxwell2022))
 * David Banham ([@davidbanham](https://github.com/davidbanham))
+* ([@akhatri](https://github.com/akhatri))
